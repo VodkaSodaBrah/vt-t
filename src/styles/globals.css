@@ -1,0 +1,87 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 568px;
+  height: 946px;
+  padding: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  margin: 12px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  cursor: grab;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.item.dragging {
+  opacity: 0.5;
+}
+
+.drag-preview {
+  width: 288px;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  transform: scale(0.95);
+}
+
+.drag-preview img {
+  margin-right: 16px;
+}
+
+.item img, .drag-preview img {
+  width: 64px;
+  height: 64px;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-location {
+  font-size: 14px;
+  color: #666;
+}
+
+.drag-handle {
+  cursor: grab;
+}
